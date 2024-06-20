@@ -15,4 +15,10 @@
     <ProjectReference Include="..\Shareds\Shareds.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\AddOrUpdate.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
 </Project>
