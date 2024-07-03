@@ -1,0 +1,42 @@
+﻿@page "/"
+@using Application.Services
+@using Domain.Entitites
+@using NetcodeHub.Packages.Components.Validations.OnInput
+@using NetcodeHub.Packages.Components.Toast
+@inject IEmployeeService emp
+@inject ToastService toastService
+
+<PageTitle>Home</PageTitle>
+
+<div class="row">
+    <div class="col-lg-6">
+        <EditForm Model="employee" OnValidSubmit="Save">
+            <DataAnnotationsValidator />
+            <FloatingText @bind-Value="employee.Name" Label="Customer FullName" Placeholder="Jhon Doe" class="form-control" />
+            <ValidationMessage For="()=>employee.Name" />
+
+            <FloatingTextArea @bind-Value="employee.Address" Label="Customer Address" Placeholder="Turkey" class="form-control mb-3" />
+            <ValidationMessage For="()=>employee.Address" />
+
+            <button class="btn btn-primary mt-5 mb-5" type="submit">Save</button>
+        </EditForm>
+    </div>
+</div>
+
+
+
+@code {
+    int duration = 4000;
+    Employee employee = new();
+
+    async Task Save()
+    {
+        var(flag,message) = await emp.AddAsync(employee);
+        if (!flag)
+        {
+            return;
+        }
+        
+
+    }
+}
