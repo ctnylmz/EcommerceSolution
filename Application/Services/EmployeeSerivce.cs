@@ -20,7 +20,7 @@ namespace Application.Services
             var data = await _httpClient.PostAsJsonAsync("https://localhost:7283/api/employee", employee);
             var response = await data.Content.ReadFromJsonAsync<ServiceResponse>();
             return response!;
-        }
+        } 
 
         public async Task<ServiceResponse> DeleteAsync(int Id)
         {
