@@ -1,39 +1,29 @@
 ﻿@page "/Product"
 
-
 <!-- Project Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".3s">
-            <h1 class="display-5">Telefon alışverişinizi kolaylaştırıyoruz!</h1>
-        </div>
-
-        <div class="row g-5">
-            @foreach (var i in Enumerable.Range(1, 8))
-            {
-                <div class="col-md-4 hp">
-                    <div class="card h-100 shadow-sm px-3 pt-4">
-                        <a href="#">
-                            <img src="https://m.media-amazon.com/images/I/81gK08T6tYL._AC_SL1500_.jpg" class="card-img-top" alt="product.title" />
+<div class="text-center mb-5 wow fadeInUp mt-5" data-wow-delay=".3s">
+    <h5 class="mb-2 px-3 py-1 text-dark rounded-pill d-inline-block border border-2 border-primary">Telefon Ürünleri</h5>
+</div>
+<div class="row m-5">
+    @for (int i = 1; i < 7; i++)
+    {
+        <div class="col-md-3 mb-5">
+            <NavLink href="@($"/Product/{i}")" class="card shadow">
+                <img src="/img/phone1.png" alt="watch large" style="height:300px;">
+                <div class="card-footer bg-gray-200 border-top border-gray-300 p-4">
+                    <a class="h5">SIFIR 15 PRO MAX 256GB</a>
+                    <div class="d-flex mt-2">
+                        <span class="badge bg-primary me-2">Apple</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="h6 mb-0 text-gray">37.999 TL</span>
+                        <a class="btn btn-primary btn-tertiary">
+                            Detaylı Bilgi
                         </a>
-
-                        <div class="card-body">
-                            <div class="clearfix mb-3">
-                                <span class="float-end badge rounded-pill bg-success">50.000 TL</span>
-                            </div>
-                            <h5 class="card-title text-center">
-                                <span target="_blank" href="#">İphone 15 Pro Max 2T</span>
-                            </h5>
-
-                            <div class="d-grid gap-2 my-4">
-                                <a href="#" class="btn btn-warning bold-btn">Detay Bilgi</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            }
+            </NavLink>
         </div>
-    </div>
+    }
 </div>
-
 <!-- Project End -->
