@@ -1,4 +1,4 @@
-
+﻿
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -17,7 +17,7 @@
 
 .back-to-top {
     position: fixed;
-    right: 30px;
+    right: 30px; /* Sağ tarafta sabitlenmiş */
     bottom: 30px;
     display: flex;
     width: 58px;
@@ -26,6 +26,20 @@
     justify-content: center;
     z-index: 99;
 }
+
+.back-to-top2 {
+    position: fixed;
+    left: 30px; /* Sol tarafta sabitlenmiş */
+    bottom: 30px;
+    display: flex;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+
 
 .btn {
     text-transform: uppercase;
@@ -579,7 +593,7 @@
 /*** Call To Action start ***/
 
 .call-to-action {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/1_View04-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
