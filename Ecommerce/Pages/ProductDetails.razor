@@ -15,18 +15,18 @@
 <div class="container-fluid py-5">
     <div class="container py-5 shadow">
         <div class="row g-5">
-            <div class="col-lg-6 col-md-12 wow fadeInUp " data-wow-delay=".3s" style="height:300px;">
+            <div class="col-md-4 mx-auto wow fadeInUp " data-wow-delay=".3s" >
                 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner ">
                         <div class="carousel-item active">
-                            <img src="img/Wp.jpeg" class="d-block w-100" alt="First slide" style="height:300px;">
+                            <img src="img/phone2.png" class="d-block w-100" alt="First slide" style="height:300px;">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/1_View04-1.jpg" class="d-block w-100" alt="Second slide" style="height:300px;">
+                            <img src="img/phone3.png" class="d-block w-100" alt="Second slide" style="height:300px;">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -38,24 +38,22 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-
             </div>
-            <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".6s" style="height:300px;">
+            <div class="col-md-7 mx-auto wow fadeInUp" data-wow-delay=".6s" >
                 <div class="about-item overflow-hidden">
                     <div class="d-flex justify-content-between align-items-center">
                         <h6 class="display-5 mb-2" style="font-size:24px;">SIFIR İPHONE 15 PRO MAX 256 </h6>
                         <h6 class="mb-2 text-danger" style="font-size:24px;">37.000 TL</h6>
                     </div>
-                    <p style="font-size:17px;">
+                    <p >
                         AKSESUAR DÜNYASI GÜVENCESİ İLE İPHONE 15 PRO MAX 256 GB
-                        SIFIR KAPALI KUTU(SINIRLI STOK)RENK SEÇENEKLERİ MEVCUTTUR ALICISINA HAYIRLI OLSUN
+                        SIFIR KAPALI KUTU (SINIRLI STOK) RENK SEÇENEKLERİ MEVCUTTUR ALICISINA HAYIRLI OLSUN
                         İSTANBUL,GEBZE,KOCAELİ,YALOVA,BURSA,SİLİVRİ KURYEMİZ
                         (HER TÜRLÜ SORULARINIZ İÇİN WHATSAPP NUMARAMIZA YAZINI SİZE DÖNÜŞ YAPILICAKTIR
                     </p>
                     <a href="https://wa.me/1234567890" target="_blank" type="button" class="btn btn-primary border-0 rounded-pill px-4 py-3 mt-2" >Hemen Satın Al</a>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -77,9 +75,9 @@
                                 <NavLink href="@($"/Product/{item.Id}")" class="card shadow">
                                     <img src="@item.ImageUrl" alt="watch large" style="height:300px;">
                                     <div class="card-footer bg-gray-200 border-top border-gray-300 p-4">
-                                        <a class="h5">SIFIR 15 PRO MAX 256GB</a>
+                                        <a class="h5">@item.Title</a>
                                         <div class="d-flex mt-2">
-                                            <span class="badge bg-primary me-2">Apple</span>
+                                            <span class="badge bg-primary me-2">@item.Brand</span>
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-3">
                                             <span class="h6 mb-0 text-gray">37.999 TL</span>
@@ -119,12 +117,10 @@
     {
         Items = new List<Item>
         {
-            new Item { Id = 1, ImageUrl = "img/phone1.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" },
-            new Item { Id = 2, ImageUrl = "img/phone2.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" },
-            new Item { Id = 3, ImageUrl = "img/phone3.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" },
-            new Item { Id = 4, ImageUrl = "img/phone4.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" },
-            new Item { Id = 5, ImageUrl = "img/phone5.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" },
-            new Item { Id = 6, ImageUrl = "img/phone6.png", Title = "How To Build A Cleaning Plan", Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", Date = "10 Feb, 2023" }
+            new Item { Id = 1, ImageUrl = "img/phone1.png", Title = "SIFIR 15 PRO MAX 256GB", Brand = "Apple", Date = "10 Feb, 2023" },
+            new Item { Id = 2, ImageUrl = "img/phone2.png", Title = "A50 64Gb 2023", Brand = "Samsung", Date = "10 Feb, 2023" },
+            new Item { Id = 3, ImageUrl = "img/phone3.png", Title = "A70 128GB 2024", Brand = "Samsung", Date = "10 Feb, 2023" },
+            new Item { Id = 6, ImageUrl = "img/phone5.png", Title = "S24 Ultra 2024", Brand = "Samsung", Date = "10 Feb, 2023" }
         };
 
         DisplayItems = new List<Item>(Items.Take(3));
@@ -173,7 +169,7 @@
         public int Id { get; set; }
         public string ImageUrl { get; set; }
         public string Title { get; set; }
-        public string Description { get; set; }
+        public string Brand { get; set; }
         public string Date { get; set; }
     }
 }
