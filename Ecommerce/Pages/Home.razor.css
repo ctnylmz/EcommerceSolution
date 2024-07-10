@@ -1,0 +1,6 @@
+﻿body {
+ .carousel-item::after
+{
+    background: rgba(0, 0, 0, .7);
+}
+}

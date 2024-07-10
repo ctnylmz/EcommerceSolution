@@ -1,5 +1,10 @@
 ﻿@page "/"
 
+<style>
+    .carousel-item::after {
+        background: rgba(0, 0, 0, .7);
+    }
+</style>
 <!-- Carousel Start -->
 <div class="container-fluid carousel px-0 mb-5 pb-5">
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
@@ -17,8 +22,8 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="img/Wp.jpeg" class="img-fluid w-100" alt="Second slide" style="height:660px;">
+            <div class="carousel-item" style="">
+                <img src="img/Wp.jpeg" class="img-fluid w-100" alt="Second slide" style="height:660px; background: rgba(0, 0, 0, .7);">
                 <div class="carousel-caption">
                     <div class="container carousel-content">
                         <h2 class="text-white display-1 mb-4 animated slideInDown">alışverişinizi kolaylaştırıyoruz!</h2>
